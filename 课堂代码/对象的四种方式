@@ -1,0 +1,116 @@
+<html>
+	<head></head>
+	<body>
+		<script>
+		console.log("------------第一种------------");
+		var Car = {
+			 id : '粤9806',
+			 vlog : 'W',
+			 from : '轿车',
+			 Whistle : function(){
+				console.log(this.vlog+"滴滴滴滴~~~");
+			 },
+			 refule : function(){
+				console.log(this.id+'已加九十八元油费');
+			 },
+			 carry : function(){
+				console.log(this.from+"载客二十人");
+			 }
+		};
+		Car.Whistle();
+		Car.refule();
+		Car.carry();
+		
+		</script>
+	</body>
+
+
+</html>
+
+<html>
+	<head></head>
+	<body>
+		<script>
+		console.log("------------第二种------------");
+		function Car (id, vlog, from) {
+			 var car = {};
+			 car.id = id;
+			 car.vlog = vlog;
+			 car.from = from;
+			 car.Whistle = function(){
+				console.log(this.vlog+"滴滴滴滴~~~");
+			 };
+			 car.refule = function(){
+				console.log(this.id+'已加九十八元油费');
+			 };
+			 car.carry = function(){
+				console.log(this.from+"载客二十人");
+			 };
+			return car
+		}
+		var drive = Car('粤9806','W','轿车');
+		drive.Whistle();
+		drive.refule();
+		drive.carry();
+		
+		</script>
+	</body>
+</html>
+
+<html>
+	<head></head>
+	<body>
+		<script>
+		console.log("------------第三种------------");
+		function Car (id, vlog, from) {
+			 this.id = id;
+			 this.vlog = vlog;
+			 this.from = from;
+			 this.Whistle = function(){
+				console.log(this.vlog+"滴滴滴滴~~~");
+			 };
+			 this.refule = function(){
+				console.log(this.id+'已加九十八元油费');
+			 };
+			 this.carry = function(){
+				console.log(this.from+"载客二十人");
+			 };
+		}
+		var drive = new Car('粤9806','W','轿车');
+		drive.Whistle();
+		drive.refule();
+		drive.carry();
+	</script>
+	</body>
+</html>		
+
+<html>
+	<head></head>
+	<body>   
+		<script>
+		console.log("------------第四种------------");
+		class Cars {
+			constructor (id, vlog, from){
+			 this.id = id;
+			 this.vlog = vlog;
+			 this.from = from;
+			 }
+			 Whistle(){
+				console.log(this.vlog+"滴滴滴滴~~~");
+			 };
+			 refule(){
+				console.log(this.id+'已加九十八元油费');
+			 };
+			 carry(){
+				console.log(this.from+"载客二十人");
+			 };
+			 
+		}
+		var drive = new Cars('粤9806','W','轿车');
+		drive.Whistle();
+		drive.refule();
+		drive.carry();
+		
+		</script>
+	</body>
+</html>
